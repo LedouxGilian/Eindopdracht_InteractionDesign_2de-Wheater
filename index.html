@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Wheater History</title>
+    <meta name="description" content="This is my HTML5 boilerplate.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#3385FF">
+    <meta name="theme-color" content="#3385FF">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/screen.css">
+
+    <script type="text/javascript" src="script/app.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.1/Chart.js"></script>
+</head>
+
+<body>
+    <section class="o-row o-row--lg o-row--login">
+        <div class="o-container">
+            <div class="c-card">
+                <p class="c-toggle-dayNight">
+                    <img class="c-toggle-dayNight__icon" src="img/svg/day.svg">
+                    <input class="o-hide-accessible c-option c-option--hidden js-dayNight-toggle" type="checkbox" id="toggle1">
+                    <label class="c-label c-label--option c-custom-toggle" for="toggle1">
+                        <span class="c-custom-toggle__fake-input">
+                        </span>
+                    </label>
+                    <img class="c-toggle-dayNight__icon" src="img/svg/night.svg">
+                </p>
+                <div class="c-weather">
+                    <p class="js-wheaterInfo"><img class="c-wheaterIcon js-wheaterIcon" src="img/svg/01d@2x.svg" /></p> 
+                </div>
+                <form class="c-card-top js-form">
+                    <div class="c-nav">
+                        <input class="c-input js-startDate" type="date" id="meeting-time" name="startDate"
+                            placehodler="Start Date" required> 
+                        <input class="c-input js-endDate" type="date" id="meeting-time" name="endDate"
+                            placeholder="End Date" required>
+                        <!-- <input class="c-input js-searchBar" type="text" name="search" placeholder="Search" -->
+                            <!-- autocomplete="off" required> -->
+                    </div>
+                </form>
+                <form class="c-card-mid">
+                    <div>
+                        <canvas class="c-chart" id="myChart" style="width:100%;"></canvas>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
