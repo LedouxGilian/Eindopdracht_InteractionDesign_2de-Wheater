@@ -77,16 +77,16 @@ const getOpenweatherAPI = async function (cityName) {
 
   let data = await result.json();
   console.log(data);
-  showWheaterInfo(data);
+  showWeatherInfo(data);
 };
 
-const showWheaterInfo = function (results) {
+const showWeatherInfo = function (results) {
   tempC = results.main.temp - 273.15
   iconType = results.weather[0].icon
   console.log(iconType);
 
-  const img = document.querySelector(".js-wheaterIcon");
-  img.src = `img/svg/${iconType}@2x.svg`;
+  const img = document.querySelector(".js-weatherIcon");
+  img.src = `./img/svg/${iconType}@2x.svg`;
 
   // img.src = `img/svg/03n@2x.svg`;
 
@@ -94,23 +94,6 @@ const showWheaterInfo = function (results) {
   // const temp = document.createTextNode(`${tempC.toFixed(1)}°C`);
   // info.appendChild(temp);
 };
-
-// const switchTheme = function () {
-//   var element = document.body;
-//   element.classList.toggle("dark-mode");
-// };
-
-// const showResult = function(data) {
-//   tempF = data.main.temp
-//   tempC = data.main.temp - 273.15
-
-//   document.querySelector('.js-searchBar').value = tempC.toFixed(1);
-// };
-
-// const getQuery = async function() {
-//     searchresult = document.querySelector('.js-searchBar').value;
-//     console.log(searchresult);
-// };
 
 const getEventListeners = function () {
   // document.querySelector('.js-searchBar').addEventListener('keyup', function (event) {
